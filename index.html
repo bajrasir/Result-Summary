@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png"
     />
+    <link rel="stylesheet" href="assets/css/styles.css" />
 
     <title>Frontend Mentor | Results summary component</title>
 
@@ -26,23 +27,72 @@
     </style>
   </head>
   <body>
-    <h2>This is First Code Challange</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem magnam
-      odio, atque blanditiis porro officia repudiandae facilis sint tempora
-      ipsam molestiae quasi fugiat mollitia perspiciatis, doloribus possimus
-      officiis nulla tenetur et assumenda dignissimos beatae! Rerum consequuntur
-      voluptate quas ea perspiciatis. Soluta minima earum maxime vitae
-      praesentium perspiciatis inventore ratione ut maiores! Aliquam repellat
-      laboriosam atque, obcaecati temporibus rerum quis tempore, dolorem
-      expedita rem accusamus praesentium. Quam a magni assumenda aut!
-    </p>
+    <main>
+      <div class="container">
+        <div class="result">
+          <h1>Your Result</h1>
+          <div class="score">
+            <h3>76</h3>
+            <p>of 100</p>
+          </div>
+          <div class="conclusion">
+            <h3>Great</h3>
+            <p>
+              You scored higher than 65% of the people who have taken these
+              tests.
+            </p>
+          </div>
+        </div>
+        <div class="summary">
+          <h1>Summary</h1>
+          <div class="summary-details">
+            <div class="summary-item">
+              <div class="summary-heading">
+                <img src="assets/images/icon-reaction.svg" alt="" srcset="" />
+                <p>Reaction</p>
+              </div>
+              <p class="summary-score">
+                <span class="actual-score">80</span>
+                <span class="total-score">/ 100</span>
+              </p>
+            </div>
 
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+            <div class="summary-item">
+              <div class="summary-heading">
+                <img src="assets/images/icon-memory.svg" alt="" srcset="" />
+                <p>Memory</p>
+              </div>
+              <p class="summary-score">
+                <span class="actual-score">92</span>
+                <span class="total-score"> / 100</span>
+              </p>
+            </div>
+
+            <div class="summary-item">
+              <div class="summary-heading">
+                <img src="assets/images/icon-verbal.svg" alt="" srcset="" />
+                <p>Verbal</p>
+              </div>
+              <p class="summary-score">
+                <span class="actual-score">61</span>
+                <span class="total-score"> / 100</span>
+              </p>
+            </div>
+
+            <div class="summary-item">
+              <div class="summary-heading">
+                <img src="assets/images/icon-visual.svg" alt="" srcset="" />
+                <p>Visual</p>
+              </div>
+              <p class="summary-score">
+                <span class="actual-score">72</span>
+                <span class="total-score"> / 100</span>
+              </p>
+            </div>
+          </div>
+          <button class="btn-continue">Continue</button>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

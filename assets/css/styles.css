@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+:root
+{
+    --light-red:hsl(0, 100%, 67%);
+    --orangey-yellow:hsl(39, 100%, 56%);
+    --green-teal:hsl(166, 100%, 37%);
+    --cobalt-blue:hsl(234, 85%, 45%);
+    --light-slate-blue-background:hsl(252, 100%, 67%);
+    --light-royal-blue-background:hsl(241, 81%, 54%);
+    --violet-blue-circle:hsla(256, 72%, 46%, 1);
+    --persian-blue-circle:hsla(241, 72%, 46%, 0);
+    --white:hsl(0, 0%, 100%);
+    --pale-blue:hsl(221, 100%, 96%);
+    --light-lavender:hsl(241, 100%, 89%);
+    --dark-grey-blue:hsl(224, 30%, 27%);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-size: 18px;
+    font-family: "Hanken Grotesk", sans-serif;
+    background-color: var(--white);
+    
+}
+.container
+{
+    max-width: 700px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+    box-shadow: 0 10px 20px 10px hsla(241, 100%, 89%, 0.3);
+    border-radius: 30px;
+    padding: 0;
+
+}
+.result
+{
+    height: 500px;
+    width: 360px;
+    background: linear-gradient(to bottom, var(--light-slate-blue-background) , var(--light-royal-blue-background) );
+    border-radius: 30px;
+    margin:  0;
+    text-align: center;
+    color: var(--white);
+    padding: 20px;
+}
+.result h1
+{
+    font-size: 1.3rem;
+    margin: 10px;
+    font-weight: 300;
+    opacity: 0.7;
+}
+.result .score
+{
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    height: 190px;
+    width: 190px;
+    text-align: center;
+    background:linear-gradient(to bottom, var(--violet-blue-circle) 60%, var(--persian-blue-circle));
+    border-radius: 50%;
+    padding: 50px;
+}
+.result .score h3
+{
+    font-size: 4rem;
+}
+.result .score > p
+{
+    font-size: 1rem;
+    margin:auto;
+    opacity: 0.4;
+}
+.result .conclusion
+{
+    opacity: 0.8;
+}
+.result .conclusion h3
+{
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+.result .conclusion > p
+{
+    padding: 0 30px;
+    margin: 15px auto;
+    font-size: 1.1rem;
+}
+
+.container .summary
+{
+
+    height: 100%;
+    width: 85%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+.summary h1
+{
+    font-size: 1.3rem;
+    padding:15px 0;
+    margin-top: 10px;
+    font-weight: 700;
+}
+.summary-details
+{
+    display: flex;
+    flex-direction: column;
+    /* margin-bottom: 40px; */
+}
+.summary-item
+{
+    display: flex;
+    flex-direction: col;
+    justify-content: space-between;
+    padding: 17px ;
+    border: 1px solid #ccc;
+    margin:8px 0;
+    border-radius: 8px;
+    border: none;
+
+}
+.summary-item .summary-heading
+{
+    display: flex;
+    flex-direction: row;
+}
+.summary-item .summary-heading img
+{
+    margin-right: 15px;
+
+}
+
+.summary-score .actual-score
+{
+    color:#000;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.summary-score .total-score
+{
+    color: #000;
+    opacity: 0.5;
+}
+
+.summary-details .summary-item:first-child
+{
+    background-color: hsla(0,100%,67%,0.1);
+    color: var(--light-red);
+}
+.summary-details .summary-item:nth-child(2)
+{
+    background-color: hsla(39,100%,56%,0.1);
+    color: var(--orangey-yellow);
+}
+.summary-details .summary-item:nth-child(3)
+{
+    background-color: hsla(166,100%,37%,0.1);
+    color: var(--green-teal);
+}
+.summary-details .summary-item:nth-child(4)
+{
+    background-color: hsla(234,85%,45%,0.1);
+    color: var(--cobalt-blue);
+}
+.btn-continue
+{
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    margin-top: 40px;
+    padding: 20px auto;
+    background-color: var(--dark-grey-blue);
+    color: var(--white);
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+}
+
+.btn-continue:hover
+{
+    background: linear-gradient(to bottom,var(--violet-blue-circle), var(--light-slate-blue-background))
+}
+
+@media only screen and (max-width:610px)
+{
+    .container
+    {
+        /* height: 100vh; */
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+    .result
+    {
+        width: 100%;
+
+        border-radius: 0% 0% 9% 9%;
+    }
+    .result .conclusion h3
+    {
+    font-size: 2.2rem;
+        margin-bottom: 0;
+    }
+    .result .conclusion > p
+    {
+    padding: 0 40px;
+    margin: 20px auto;
+    font-size: 1.5rem;
+    }
+    .summary h1
+    {
+        font-size: 1.5rem;
+        opacity: 0.7;
+    }
+}
+
